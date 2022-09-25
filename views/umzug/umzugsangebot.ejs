@@ -1,0 +1,204 @@
+<%- include('../inc/header.ejs') %>
+
+
+<section>
+    <h2>Umzugsangebot</h2>
+    <form action="/umzug/umzugsangebot" method="POST" id="regFormExpress" name="regFormExpress"
+          enctype="multipart/form-data">
+        <p>Bitte geben Sie die Adressen Ihres Umzugs?</p>
+        <div>
+            <h3>Umzug von</h3>
+            <label>Straße</label>
+            <input name="strasse1" type="text">
+            <label>Hausnr</label>
+            <input name="hausnummer1" type="text">
+            <label>PLZ</label>
+            <input name="plz1" type="text">
+            <label>Ort</label>
+            <input name="ort1" type="text">
+        </div>
+        <div>
+            <h3>Umzug nach</h3>
+            <label>Straße</label>
+            <input name="strasse2" type="text">
+            <label>Hausnr</label>
+            <input name="hausnummer2" type="text">
+            <label>PLZ</label>
+            <input name="plz2" type="text">
+            <label>Ort</label>
+            <input name="ort2" type="text">
+        </div>
+        <div>
+            <p>Was sind Ihre Umzugsdetails?</p>
+            <div>
+                <div>
+                    <label for="inputGroupSelect01">Umzug von</label>
+                    <select id="inputGroupSelect01" name="umzug_von">
+                        <option value=" Keine ">Bitte Auswählen</option>
+                        <option value="Haus">Haus</option>
+                        <option value="Wohnung">Wohnung</option>
+                        <option value="buero">Büro</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="inputGroupSelect01">Zimmer</label>
+                    <select id="inputGroupSelect01" name="zimmer">
+                        <option value=" Keine ">Bitte Auswählen</option>
+                        <option value="1 Zimmer">1</option>
+                        <option value="2 Zimmer">2</option>
+                        <option value="3 Zimmer">3</option>
+                        <option value="4 Zimmer">4</option>
+                        <option value="5 Zimmer">5 oder mehr</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="inputGroupSelect01">Fläche</label>
+                    <select id="inputGroupSelect01" name="flaeche">
+                        <option value=" Keine ">Bitte Auswählen</option>
+                        <option value="von 0 bis 40 Quadratmeter">von 0 bis 40m²</option>
+                        <option value="von 40 bis 80 Quadratmeter">von 40 bis 80m²</option>
+                        <option value="von 120 bis 160 Quadratmeter">von 120 bis 160m²</option>
+                        <option value="Über 160 Quadratmeter">über 160m²</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="inputGroupSelect01">Treppenhaus</label>
+                    <select id="inputGroupSelect01" name="treppenhaus">
+                        <option value=" Keine ">Bitte Auswählen</option>
+                        <option value="eng">eng</option>
+                        <option value="normal">normal</option>
+                        <option value="breit">breit</option>
+                    </select>
+                </div>
+            </div>
+            <div>
+                <div>
+                    <label for="inputGroupSelect01">Umzug nach</label>
+                    <select id="inputGroupSelect01" name="umzug_nach">
+                        <option value=" Keine ">Bitte Auswählen</option>
+                        <option value="Haus">Haus</option>
+                        <option value="Wohnung">Wohnung</option>
+                        <option value="buero">Büro</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="inputGroupSelect01">Kostenübernahme</label>
+                    <select id="inputGroupSelect01" name="kosten">
+                        <option value=" Keine ">Bitte Auswählen</option>
+                        <option value="Privat">Privat</option>
+                        <option value="Geschäftlich">Geschäftlich</option>
+                        <option value="Behörde">Behörde</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="inputGroupSelect01">Aufzug</label>
+                    <select id="inputGroupSelect01" name="aufzug">
+                        <option value=" Keine ">Bitte Auswählen</option>
+                        <option value="vorhanden6">vorhanden bis zu 6 Personen</option>
+                        <option value="vorhanden8">vorhanden ab 8 Personen</option>
+                        <option value="nicht vorhanden">nicht vorhanden</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="inputGroupSelect01">Halteverbotszone</label>
+                    <select id="inputGroupSelect01" name="halteverbotszone">
+                        <option value=" Keine ">Bitte Auswählen</option>
+                        <option value="auszugsort">Auszugsort</option>
+                        <option value="einzugsort">Einzugsort</option>
+                        <option value="beide">beide</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        <div>
+            <div>
+                <h4>Zusatzservice</h4>
+            </div>
+            <div>
+                <label>Kartons einpacken</label>
+                <input type="radio" name="kartoneinpacken" value="ja"> Ja
+                <input type="radio" name="kartoneinpacken" value="nein" checked> Nein
+            </div>
+            <div>
+                <label>Kartons auspacken</label>
+                <input type="radio" name="kartonauspacken" value="ja"> Ja
+                <input type="radio" name="kartonauspacken" value="nein" checked> Nein
+            </div>
+            <div>
+                <label>Möbel demontieren</label>
+                <input type="radio" name="moebeldemontieren" value="ja"> Ja
+                <input type="radio" name="moebeldemontieren" value="nein" checked> Nein
+            </div>
+            <div>
+                <label>Möbel montieren</label>
+                <input type="radio" name="moebelmontieren" value="ja"> Ja
+                <input type="radio" name="moebelmontieren" value="nein" checked> Nein
+            </div>
+            <div>
+                <label>Küche demontieren</label>
+                <input type="radio" name="kuechedemontieren" value="ja"> Ja
+                <input type="radio" name="kuechedemontieren" value="nein" checked> Nein
+            </div>
+            <div>
+                <label>Küche montieren</label>
+                <input type="radio" name="kuechemontieren" value="ja"> Ja
+                <input type="radio" name="kuechemontieren" value="nein" checked> Nein
+            </div>
+        </div>
+
+        <div>
+            <div>
+                <div>
+                    <h4>Für ein besseres Angebot können sie uns Bilder zukommen lassen!</h4>
+                </div>
+                <p>Bilder Ihrer Umzugsgüter hochladen</p>
+                <input type="file" name="images" id="fileElem" multiple="multiple" accept="image/*">
+            </div>
+            <div>
+                <div>
+                    <p>Bemerkung</p>
+                    <textarea rows="4" name="bemerkung" value=""></textarea>
+                </div>
+            </div>
+        </div>
+        <p>Geben Sie bitte hier Ihre Kontaktdaten ein, damit wir Sie kontaktieren</p>
+        <div>
+            <label>Anrede</label>
+            <div>
+                <input type="radio" name="gender" id="exampleRadios1"
+                       value="Herr" checked>
+                <label for="exampleRadios1">Herr</label>
+            </div>
+            <div>
+                <input type="radio" name="gender" id="exampleRadios2"
+                       value="Frau">
+                <label for="exampleRadios2">Frau</label>
+            </div>
+            <div>
+                <input type="radio" name="gender" id="exampleRadios3"
+                       value="Firma">
+                <label for="exampleRadios3">Firma</label>
+            </div>
+        </div>
+        <div>
+            <label for="validationCustomExpress02">Vorname *</label>
+            <input name="vorname" id="validationCustomExpress02" type="text" value="">
+        </div>
+        <div>
+            <label for="validationCustomExpress03">Nachname *</label>
+            <input name="nachname" id="validationCustomExpress03" type="text" value="">
+        </div>
+        <div>
+            <label for="validationCustomExpress04">Telefonnummer *</label>
+            <input name="telefon" id="validationCustomExpress04" type="text" value="">
+        </div>
+        <div>
+            <label for="emailExpress">E-Mail *</label>
+            <input name="email" id="emailExpress" type="text" value="">
+        </div>
+        <button type="submit">Senden</button>
+    </form>
+</section>
+
+<%- include('../inc/footer.ejs') %>

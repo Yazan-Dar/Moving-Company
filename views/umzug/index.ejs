@@ -1,0 +1,26 @@
+<%- include('../inc/header.ejs') %>
+
+<section>
+    <form action="/umzug/index" method="POST">
+        <h1>Umzugsangebot erhalten</h1>
+        <div>
+            <input type="radio" name="flexRadioDefault" id="flexRadioDefault1"
+                   checked>
+            <label for="flexRadioDefault1">
+                Bestimmter Tag
+            </label>
+            <input name="date" type="date" id="dateId" lang="en-US"/>
+        </div>
+        <div>
+            <input type="radio" name="flexRadioDefault" id="flexRadioDefault2">
+            <label for="flexRadioDefault2">
+                Flexibel
+            </label>
+        </div>
+        <button type="submit">
+            Angebot erhalten
+        </button>
+    </form>
+</section>
+
+<%- include('../inc/footer.ejs') %>

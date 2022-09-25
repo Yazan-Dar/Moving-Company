@@ -1,0 +1,59 @@
+<%- include('../inc/header.ejs') %>
+
+
+<section class="section">
+    <h2>Express Formular</h2>
+    <form action="/dienstleistungen/expressformular" method="POST">
+        <p>Mit unserem Formular bekommen Sie so schnell wie möglich einen Rückruf.</p>
+        <div>
+            <label>Anrede</label>
+            <input type="radio" name="genderdienst" id="gender1" value="Herr" checked>
+            <label for="gender1">Herr</label>
+            <input type="radio" name="genderdienst" id="gender2" value="Frau">
+            <label for="gender2">Frau</label>
+            <input type="radio" name="genderdienst" id="gender3" value="Firma">
+            <label for="gender3">Firma</label>
+        </div>
+        <div>
+            <label for="vorname">Vorname *</label>
+            <input type="text" id="vorname" name="vornamedienst">
+        </div>
+        <div>
+            <label for="nachname">Nachname *</label>
+            <input type="text" id="nachname" name="nachnamedienst">
+        </div>
+        <div>
+            <label for="mail">E-Mail *</label>
+            <input type="text" id="mail" name="emaildienst">
+        </div>
+        <div>
+            <label for="telefon">Telefonnummer *</label>
+            <input type="text" id="telefon" name="telefondienst">
+        </div>
+        <div>
+            <label for="address">Addresse *</label>
+            <input type="text" id="address" name="addressdienst">
+        </div>
+        <div>
+            <label for="select">Dienstleistungen *</label>
+            <select aria-label="Default select example" name="dienst" id="select">
+                <option value="Fliesenarbeiten" selected>Fliesenarbeiten</option>
+                <option value="Gartenarbeiten">Gartenarbeiten</option>
+                <option value="Tapezierarbeiten">Tapezierarbeiten</option>
+                <option value="Malerarbeiten">Malerarbeiten</option>
+                <option value="Fußböden verlegen">Fußböden verlegen</option>
+            </select>
+        </div>
+        <div>
+            <label for="bemerkung">Bemerkung</label>
+        </div>
+        <div>
+            <textarea rows="4" placeholder="Beschreiben Sie kurz bitte Ihr Anliegen" name="bemerkung"
+                      id="bemerkung"></textarea>
+        </div>
+        <button type="submit">Absenden</button>
+    </form>
+</section>
+
+
+<%- include('../inc/footer.ejs') %>
